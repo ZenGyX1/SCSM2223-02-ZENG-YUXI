@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Contact page for portfolio">
+    <title>Contact - My Portfolio</title>
+</head>
+<body>
+
+    <header>
+        <h1>ZENG YUXI</h1>
+        <p>A passionate beginner in web development.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="academic.html">Academic</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Contact Me</h2>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend style="color: darkblue; font-size: 20px;">Personal Information</legend>
+
+                    <p>
+                        <label for="fullname">Full Name:</label><br>
+                        <input type="text" id="fullname" name="fullname"
+                               style="border: 2px solid navy; padding: 6px; font-size: 14px;"
+                               placeholder="Your full name"
+                               required maxlength="60">
+                    </p>
+
+                    <p>
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email"
+                               style="background-color: #f0f8ff; padding: 6px; border: 1px solid gray;"
+                               placeholder="example@email.com"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone Number:</label><br>
+                        <input type="tel" id="phone" name="phone"
+                               style="padding: 6px; border: 1px solid black;"
+                               placeholder="012-3456789"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="age">Age:</label><br>
+                        <input type="number" id="age" name="age"
+                               style="padding: 6px; border: 1px solid green;"
+                               min="18" max="60" required>
+                    </p>
+
+                    <p>
+                        <label for="dob">Date of Birth:</label><br>
+                        <input type="date" id="dob" name="dob"
+                               style="padding: 6px; background-color: #fff8dc;">
+                    </p>
+
+                    <p>
+                        <label for="satisfaction">Interest Level:</label><br>
+                        <input type="range" id="satisfaction" name="satisfaction" min="1" max="10">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend style="color: darkred; font-size: 18px;">Subject</legend>
+
+                    <p>
+                        <label for="subject">Choose a Subject:</label><br>
+                        <select id="subject" name="subject" style="padding: 6px; border: 1px solid purple;">
+                            <optgroup label="General">
+                                <option value="hello">Say Hello</option>
+                                <option value="question">Ask a Question</option>
+                            </optgroup>
+                            <optgroup label="Academic">
+                                <option value="assignment">Assignment Discussion</option>
+                                <option value="project">Project Collaboration</option>
+                            </optgroup>
+                        </select>
+                    </p>
+
+                    <p>Preferred Contact Method:</p>
+                    <input type="radio" id="contact-email" name="contact_method" value="email">
+                    <label for="contact-email">Email</label>
+
+                    <input type="radio" id="contact-phone" name="contact_method" value="phone">
+                    <label for="contact-phone">Phone</label>
+
+                    <input type="radio" id="contact-whatsapp" name="contact_method" value="whatsapp">
+                    <label for="contact-whatsapp">WhatsApp</label>
+
+                    <p>Topics of Interest:</p>
+                    <input type="checkbox" id="html" name="topic_html" value="html">
+                    <label for="html">HTML</label>
+
+                    <input type="checkbox" id="css" name="topic_css" value="css">
+                    <label for="css">CSS</label>
+
+                    <input type="checkbox" id="javascript" name="topic_js" value="javascript">
+                    <label for="javascript">JavaScript</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend style="background-color: lightgray; padding: 4px;">Message</legend>
+
+                    <p>
+                        <label for="message">Your Message:</label><br>
+                        <textarea id="message" name="message"
+                                  rows="6" cols="40"
+                                  style="border: 2px solid #444; padding: 8px; font-size: 14px;"
+                                  placeholder="Write your message here..."
+                                  maxlength="300"></textarea>
+                    </p>
+
+                    <button type="submit" style="background-color: navy; color: white; padding: 8px; border: none;">Send Message</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p><small>&copy; 2026 ZENG YUXI. All rights reserved.</small></p>
+        <address>
+            Email: yuxi@graduate.utm.my<br>
+            Phone: 01128862287
+        </address>
+    </footer>
+
+</body>
+</html>
