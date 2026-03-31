@@ -1,0 +1,223 @@
+/* ============================================
+ BREAKPOINTS
+ mobile-first base: 320px and up
+ tablet: 600px
+ desktop: 1024px
+============================================ */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&display=swap');
+
+/* =====================
+   VARIABLES (:root)
+===================== */
+:root {
+    --color-primary: #1a1a2e;
+    --color-secondary: #16213e;
+    --color-accent: #e8d5b7;
+
+    --color-text: #1a1a1a;
+    --color-muted: #666;
+    --color-surface: #f5f4f0;
+
+    --font-body: 'Lora', serif;
+    --font-heading: 'Playfair Display', serif;
+
+    --space-sm: 0.5rem;
+    --space-md: 1.5rem;
+    --space-lg: 3rem;
+}
+
+/* =====================
+   RESET
+===================== */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-surface);
+}
+
+/* =====================
+   TYPOGRAPHY
+===================== */
+h1 {
+    font-size: 3rem;
+    font-family: var(--font-heading);
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+small {
+    font-size: 1.2rem;
+}
+
+/* =====================
+   HEADER
+===================== */
+header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--space-md);
+}
+
+/* =====================
+   NAV (Flexbox)
+===================== */
+nav {
+    background-color: var(--color-secondary);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    list-style: none;
+    padding: var(--space-sm);
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: var(--space-sm);
+    border-radius: 5px;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+/* hover */
+nav a:hover {
+    background-color: var(--color-accent);
+    color: black;
+}
+
+/* active page */
+nav a.active {
+    border-bottom: 3px solid var(--color-accent);
+}
+
+/* =====================
+   MAIN
+===================== */
+main {
+    padding: var(--space-md);
+}
+
+/* =====================
+   SECTION
+===================== */
+section {
+    margin-bottom: var(--space-lg);
+}
+
+/* =====================
+   CARDS (Grid)
+===================== */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
+.card {
+    background-color: white;
+    padding: var(--space-md);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* =====================
+   TABLE
+===================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #eee;
+}
+
+/* =====================
+   FORM
+===================== */
+input, textarea, select {
+    width: 100%;
+    padding: var(--space-sm);
+    margin-bottom: var(--space-sm);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* focus */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-accent);
+}
+
+/* button */
+button {
+    padding: var(--space-sm);
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--color-accent);
+    color: black;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (min-width: 600px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
